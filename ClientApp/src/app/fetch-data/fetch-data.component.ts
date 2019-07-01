@@ -1,23 +1,42 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fetch-data',
   templateUrl: './fetch-data.component.html'
 })
-export class FetchDataComponent {
-  public forecasts: WeatherForecast[];
+export class FetchDataComponent implements OnInit {
+  apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=Szczecin,pl&appid=566c452675edab55f8961aa17ed935da&units=metric';
+ 
+  forecasts$: WeatherForecast;
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'api/SampleData/WeatherForecasts').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+  constructor(private _http: HttpClient ) { }
+
+  ngOnInit() {
+    return this.getWeather()
+      .subscribe(data => this.forecasts$=this.extractData(data));
+  }
+
+  getWeather() {
+    return this._http.get<WeatherForecast>(this.apiUrl);
+  }
+  extractData(res: any) {
+    let body = res;
+    return body.list || {};
+  }
+
+  celsiusToFahrenheit(temp: number) {
+    return Math.round(((temp * 9 / 5) + 32) * 100) / 100;
   }
 }
 
-interface WeatherForecast {
-  dateFormatted: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+
+export class WeatherForecast {
+  main: {
+    temp: number;
+  }
+  weather: {
+    description: string;
+  }
+  dt_txt: string;
 }
