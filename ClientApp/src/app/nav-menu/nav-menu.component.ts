@@ -9,15 +9,15 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavMenuComponent implements OnInit {
   public innerHeight: any;
   ngOnInit() {
-    this.innerHeight = window.innerHeight + document.documentElement.offsetHeight + 'px';
+  //  this.innerHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+   //   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    this.innerHeight = window.innerHeight +'px';
+  }
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    this.innerHeight = window.innerHeight + window.pageYOffset + 'px';
   }
   
-  constructor(private router: Router) {
-    router.events.subscribe((val) => {
-      this.innerHeight = window.innerHeight + document.documentElement.offsetHeight + 'px';
-      
-    });
-  }
 
   isExpanded = false;
 
