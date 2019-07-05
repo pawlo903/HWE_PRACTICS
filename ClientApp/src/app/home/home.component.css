@@ -1,10 +1,83 @@
 body {
 }
 h1{
-  padding-bottom:50%;
+  padding-bottom:10%;
 }
-img{
+
+.row {
+  padding-top: 20px;
 }
-a.bolded {
-  font-weight: bold;
+
+.imagePart {
+  display: inline-block;
+  width: 40%;
+}
+.arrow{
+  font-size:30px;
+}
+.imageRow{
+  height:30vh;
+}
+.textPart {
+  display:inline-block;
+  height:80%;
+  width: 60%;
+}
+.firstRow{
+  padding: 0px;
+}
+.bigImage{
+  width:100%;
+}
+
+.smallImage{
+  width:200px;
+  height:100px;
+}
+
+.imageBox{
+  height:25%;
+  width:100%;
+}
+.bigText{
+  font-size:20px;
+  font-weight:bold;
+
+}
+.line {
+  border-top: 2px solid;
+}
+.footer{
+  padding-top:5%;
+}
+.underCircle{
+  padding-left:30%;
+  width:70%;
+  text-align:center;
+}
+.carousel.slide {
+  width: 120%;
+  height: 100%;
+}
+
+.smallCicrle{
+  height:25%;
+  width:25%;
+}
+
+img {
+  width: 120%;
+  height: 100%;
+}
+@media (min-width:576px) {
+  .carousel.slide {
+    width: 78vw;
+    height: 300px;
+  }
+
+
+  img {
+    width: 78vw;
+    height: 300px;
+  }
 }

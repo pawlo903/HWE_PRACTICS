@@ -4,7 +4,8 @@ import { Sort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  templateUrl: './fetch-data.component.html',
+  styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent implements OnInit {
   apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=Szczecin,pl&appid=566c452675edab55f8961aa17ed935da&units=metric';

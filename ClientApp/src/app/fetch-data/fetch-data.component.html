@@ -1,15 +1,17 @@
-<h1>Weather forecast</h1>
+<div class="container weatherTable">
+  <div class="row"> </div>
+  <h1><a class="bolded">Weather forecast</a></h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+  <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts$"><em>Loading...</em></p>
+  <p *ngIf="!forecasts$"><em>Loading...</em></p>
 
-<table class='table table-striped' *ngIf="forecasts$" matSort (matSortChange)="sortData($event)">
+  <table class='table table-striped tableMod'  *ngIf="forecasts$" matSort (matSortChange)="sortData($event)">
     <tr>
-      <th mat-sort-header="Date">Date</th>
-      <th mat-sort-header="TempC">Temp. (C)</th>
-      <th mat-sort-header="TempF">Temp. (F)</th>
-      <th mat-sort-header="Summary">Summary</th>
+      <th class="colorHeader text-white" mat-sort-header="Date">Date</th>
+      <th class="colorHeader text-white" mat-sort-header="TempC">Temp. (C)</th>
+      <th class="colorHeader text-white" mat-sort-header="TempF">Temp. (F)</th>
+      <th class="colorHeader text-white" mat-sort-header="Summary">Summary</th>
     </tr>
     <tr *ngFor="let forecast of forecasts$">
       <td>{{ forecast.dt_txt }}</td>
@@ -17,5 +19,6 @@
       <td>{{ celsiusToFahrenheit(forecast.main.temp)}}</td>
       <td>{{ forecast.weather[0].description }}</td>
     </tr>
-</table>
+  </table>
 
+</div>
