@@ -1,14 +1,125 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<div class="container">
+  <div class="row firstRow">
+
+    <ngb-carousel>
+
+      <ng-template ngbSlide>
+        <img src="assets/src/Szczecin1.jpg" class="img-slide" alt="First slide">
+        <div class="carousel-caption">
+          <h1><a class="bolded">Stetin</a> the place to be </h1>
+          <button type="button" class="btn btn-danger">Explore  &rarr;</button>
+        </div>
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img src="assets/src/Szczecin5.jpg" class="img-slide" alt="Second slide">
+        <div class="carousel-caption">
+          <h1><a class="bolded">Stetin</a> the place to be </h1>
+          <button type="button" class="btn btn-danger">Explore  &rarr;</button>
+        </div>
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img src="assets/src/Szczecin6.jpg" class="img-slide" alt="Third slide">
+        <div class="carousel-caption">
+          <h1><a class="bolded">Stetin</a> the place to be </h1>
+          <button type="button" class="btn btn-danger">Explore &rarr;</button>
+        </div>
+      </ng-template>
+
+    </ngb-carousel>
+  </div>
+
+  <div class="row">
+
+    <div class="col-7">
+      <img class="bigImage" src="../../assets/src/Szczecin2.jpg" />
+        <a class="bigText text-muted">Top Experience in Stetin</a>
+        <p class="text-muted">Join best experience in Stetin and enjoy your stay for as long as you want</p>
+      <button class="btn btn-danger ">Explore &rarr;</button>
+    </div>
+
+    <div class="col-5">
+      <div class="imageBox">
+        <div class="imagePart">
+          <img src="../../assets/src/Szczecin2.jpg" class="smallImage" />
+        </div>
+        <div class="textPart">
+          <a class="bolded">Header with atraction<br /></a>
+          <a class="text-muted">Morbi leo rius,porta ac concrate <br /></a>
+          <a class="text-danger bolded">Read more &rarr;</a>
+        </div>
+      </div>
+      <div class="imageBox">
+        <div class="imagePart">
+          <img src="../../assets/src/Szczecin3.jpg" class="smallImage" />
+        </div>
+        <div class="textPart">
+          <a class="bolded">Header with atraction<br /></a>
+          <a class="text-muted">Morbi leo rius,porta ac concrate <br /></a>
+          <a class="text-danger bolded">Read more &rarr;</a>
+        </div>
+      </div>
+      <div class="imageBox">
+        <div class="imagePart">
+          <img src="../../assets/src/Szczecin4.jpg" class="smallImage" />
+        </div>
+        <div class="textPart">
+          <a class="bolded">Header with atraction<br /></a>
+          <a class="text-muted">Morbi leo rius,porta ac concrate <br /></a>
+          <a class="text-danger bolded">Read more &rarr;</a>
+        </div>
+      </div>
+      <div class="imageBox">
+        <div class="imagePart">
+          <img src="../../assets/src/Szczecin5.jpg" class="smallImage"/>
+        </div>
+        <div class="textPart">
+          <a class="bolded">Header with atraction<br /></a>
+          <a class="text-muted">Morbi leo rius,porta ac concrate <br /></a>
+          <a class="text-danger bolded">Read more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 imageRow">
+      <img src="../../assets/src/Szczecin7.jpg" class="rounded-circle mx-auto d-block smallCicrle" />
+      <div class="underCircle">
+        <p><a class="bolded">Heading</a></p>
+        <p>Donec sed odio.Eitam porta sem maluesad magna mollis eulismod. Nullam id dolor id nibih ulterices velhicula ut id elit.</p>
+        <button class="btn btn-danger">Explore  &rarr;</button>
+      </div>
+    </div>
+
+    <div class="col-4 imageRow">
+      <img src="../../assets/src/Szczecin8.jpg" class="rounded-circle mx-auto d-block smallCicrle" />
+      <div class="underCircle">
+        <p><a class="bolded">Heading</a></p>
+        <p>Donec sed odio.Eitam porta sem maluesad magna mollis eulismod. Nullam id dolor id nibih ulterices velhicula ut id elit.</p>
+        <button class="btn btn-danger">Explore  &rarr;</button>
+      </div>
+    </div>
+
+    <div class="col-4 imageRow">
+      <img src="../../assets/src/Szczecin9.jpg" class="rounded-circle mx-auto d-block smallCicrle" />
+      <div class="underCircle">
+        <p><a class="bolded">Heading</a></p>
+        <p>Donec sed odio.Eitam porta sem maluesad magna mollis eulismod. Nullam id dolor id nibih ulterices velhicula ut id elit.</p>
+        <button class="btn btn-danger">Explore  &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row footer  text-muted">
+    <div class="col-12"><hr class="line" /></div>
+    <div class="col-3"> </div>
+    <div class="col">About us </div>
+    <div class="col">Contact us </div>
+    <div class="col">Blog </div>
+    <div class="col">Terms & conditions </div>
+    <div class="col">Privacy policy </div>
+    <div class="col-3"> </div>
+  </div>
+</div>
